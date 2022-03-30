@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COEsWebAPI", "COEsWebAPI.csproj", "{59A337B8-D795-47E4-A56D-0FDD2DE98652}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59A337B8-D795-47E4-A56D-0FDD2DE98652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59A337B8-D795-47E4-A56D-0FDD2DE98652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59A337B8-D795-47E4-A56D-0FDD2DE98652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59A337B8-D795-47E4-A56D-0FDD2DE98652}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {705F50EE-111E-4ABF-85F0-570DE2CDA04B}
+	EndGlobalSection
+EndGlobal

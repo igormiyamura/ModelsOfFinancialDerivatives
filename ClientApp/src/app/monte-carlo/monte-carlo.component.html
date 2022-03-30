@@ -1,0 +1,60 @@
+
+
+
+<form #mcForm="ngForm" class="montecarlo-form">
+    <h2>GBM Parameters</h2>
+    <mat-form-field class="montecarlo-full-width" appearance="fill" >
+        <mat-label>Price (S)</mat-label>
+        <input type="number" matInput placeholder="S" [(ngModel)]="S" name="S">
+    </mat-form-field>
+
+    <mat-form-field class="montecarlo-full-width" appearance="fill" >
+        <mat-label>Risk-Free Rate (r)</mat-label>
+        <input type="number" matInput placeholder="r" [(ngModel)]="r" name="r">
+    </mat-form-field>
+
+    <mat-form-field class="montecarlo-full-width" appearance="fill" >
+        <mat-label>Volatility (sigma)</mat-label>
+        <input type="number" matInput placeholder="sigma" [(ngModel)]="sigma" name="sigma">
+    </mat-form-field>
+
+    <h2>Options Parameters</h2>
+    <mat-form-field class="montecarlo-full-width" appearance="fill" >
+        <mat-label>Strike (X)</mat-label>
+        <input type="number" matInput placeholder="X" [(ngModel)]="X" name="X">
+    </mat-form-field>
+
+    <mat-form-field class="montecarlo-full-width" appearance="fill" >
+        <mat-label>Time to Maturity (T)</mat-label>
+        <input type="number" matInput placeholder="T" [(ngModel)]="T" name="T">
+    </mat-form-field>
+
+    <h2>Monte Carlo Parameters</h2>
+    <mat-form-field class="montecarlo-full-width" appearance="fill" >
+        <mat-label>Steps (N)</mat-label>
+        <input type="number" matInput placeholder="N" [(ngModel)]="N" name="N">
+    </mat-form-field>
+
+    <mat-form-field class="montecarlo-full-width" appearance="fill" >
+        <mat-label>Number of Simulations (M)</mat-label>
+        <input type="number" matInput placeholder="M" [(ngModel)]="M" name="M">
+    </mat-form-field>
+
+    <button (click)="onCalculateMonteCarlo()" mat-flat-button color="primary">Calcular</button>
+    <br><br>
+
+    <h2>Output</h2>
+
+    <div *ngIf="loading else loaded">
+        <div class="loadingio-spinner-spin-pwhw8b68zf"><div class="ldio-21x2tjbuwnv">
+            <div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div>
+        </div></div>
+    </div>
+    <ng-template #loaded>
+        <div>Premium (c): <b>{{c}}</b></div>
+        <div>Error (se): <b>{{se}}</b></div>
+        <div>Time Elapsed (run_time): <b>{{run_time}}</b></div>
+    </ng-template>
+
+</form>
+

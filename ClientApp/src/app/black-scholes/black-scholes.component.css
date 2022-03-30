@@ -1,0 +1,17 @@
+
+h1, p {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.blackscholes-form {
+    margin-top: 25px;
+    margin-left: 50px;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .blackscholes-full-width {
+    width: 100%;
+  }

@@ -1,0 +1,43 @@
+
+
+<form #bsForm="ngForm" class="blackscholes-form">
+  <h2>Black Scholes</h2>
+
+  <mat-form-field class="blackscholes-full-width" appearance="fill" >
+    <mat-label>CallPutFlag</mat-label>
+    <input type="text" matInput placeholder="Ex. Call" [(ngModel)]="callputflag" name="callputflag">
+  </mat-form-field>
+
+  <mat-form-field class="blackscholes-full-width" appearance="fill">
+    <mat-label>S</mat-label>
+    <input type="number" matInput placeholder="100" [(ngModel)]="price" name="price">
+  </mat-form-field>
+
+  <mat-form-field class="blackscholes-full-width" appearance="fill">
+    <mat-label>K</mat-label>
+    <input type="number" matInput placeholder="90" [(ngModel)]="strike" name="strike">
+  </mat-form-field>
+
+  <mat-form-field class="blackscholes-full-width" appearance="fill">
+    <mat-label>T</mat-label>
+    <input  type="number" matInput placeholder="1" [(ngModel)]="time" name="time">
+  </mat-form-field> 
+
+  <mat-form-field class="blackscholes-full-width" appearance="fill">
+    <mat-label>r</mat-label>
+    <input  type="number" matInput placeholder="0.25" [(ngModel)]="rate" name="rate">
+  </mat-form-field>
+
+  <mat-form-field class="blackscholes-full-width" appearance="fill">
+  <mat-label>v</mat-label>
+    <input  type="number" matInput placeholder="0.25" [(ngModel)]="volatility" name="volatility">
+  </mat-form-field>
+
+  <button (click)="onCalculateBlackScholes()" mat-flat-button color="primary">Calcular</button>
+  <br><br>
+
+  <h2>Output</h2>
+
+  <div>* Resultado: <b>{{resultBlackScholes}}</b></div>
+
+</form> 
